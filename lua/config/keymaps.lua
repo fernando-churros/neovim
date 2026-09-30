@@ -1,6 +1,3 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
-
 local map = vim.keymap.set
 
 map("n", "<leader>h", "<cmd>NvimTreeToggle<CR>", { desc = "Abre e fecha o nvim tree"})

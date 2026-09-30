@@ -5,7 +5,7 @@ local neo = vim.g
 opt.number = true               -- print the line number in front of each line
 opt.relativenumber = true       -- show relative line number in front of each line
 opt.mouse = "a"                 -- Enables mouse support.
-opt.colorcolumn = "100"         -- columns to highlight
+opt.colorcolumn = "115"         -- columns to highlight
 opt.linespace =  3              -- number of pixel lines to use between charactersprint the line number in front of each line
 opt.scrolloff = 4               -- minimum nr. of lines above and below cursor
 opt.cursorline = true           -- highlight the screen line of the cursor
@@ -17,7 +17,7 @@ opt.mousefocus = true
 --Wrap
 opt.linebreak = true  -- wrap long lines at a blank
 opt.breakindent = false  -- wrapped line repeats indentuse the clipboard as the unnamed register
-opt.wrap = true
+opt.wrap = false
 
 --Tabs/indent
 opt.autoindent = true           -- take indent for new line from previous line
