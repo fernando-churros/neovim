@@ -160,7 +160,22 @@ vim.api.nvim_create_autocmd("FileType", {
   group = augroup("treesitter_indent"),
   pattern = { "css", "lua", "python", "java" },
   callback = function()
+    vim.treesitter.start()
     vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+  end
+})
+
+-- HTML tag
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {"html", "htmldjango"},
+  callback = function()
+    vim.keymap.set(
+      "n",
+      "<C-y>",
+      "I<<Esc>A><Esc>yypa/<Esc>O",
+      { buffer = true },
+      { desc = "Insert html close tag"}
+    )
   end
 })
 
