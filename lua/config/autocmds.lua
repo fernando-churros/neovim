@@ -172,8 +172,15 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.keymap.set(
       "i",
       "<C-y>",
-      --"<Esc>I<<Esc>A><Esc>yypa/<Esc>O",
-      "<Esc>yiwi<<Esc>A><<Esc>pa><Esc>bba",
+      "<Esc>yiwi<<Esc>A></<Esc>pa><Esc>bba",
+      { buffer = true },
+      { desc = "Insert html close tag"}
+    )
+
+    vim.keymap.set(
+      "i",
+      "<C-g>",
+      "<Esc>I<<Esc>A><Esc>yypa/<Esc>O",
       { buffer = true },
       { desc = "Insert html close tag"}
     )
