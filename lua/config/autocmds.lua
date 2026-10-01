@@ -170,9 +170,10 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = {"html", "htmldjango"},
   callback = function()
     vim.keymap.set(
-      "n",
+      "i",
       "<C-y>",
-      "I<<Esc>A><Esc>yypa/<Esc>O",
+      --"<Esc>I<<Esc>A><Esc>yypa/<Esc>O",
+      "<Esc>yiwi<<Esc>A><<Esc>pa><Esc>bba",
       { buffer = true },
       { desc = "Insert html close tag"}
     )
