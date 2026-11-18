@@ -49,6 +49,7 @@ opt.writebackup = false         -- make a backup before overwriting a file
 opt.foldmethod = "expr"
 opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 opt.foldcolumn = "auto"
+opt.foldlevelstart = 99
 
 -- Neovide Sets
 if vim.g.neovide then
